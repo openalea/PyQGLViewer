@@ -4,7 +4,7 @@ requires = ["sip", "pyqt-builder", "setuptools"]
 build-backend = "sipbuild.api"
 
 # Specify the PEP 566 metadata for the project.
-[project]
+[tool.sip.metadata]
 name = "PyQGLViewer"
 version = "1.3.0"
 summary = "Python bindings for the libQGViewer widget"
