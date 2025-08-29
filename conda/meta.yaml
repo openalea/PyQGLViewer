@@ -20,6 +20,8 @@ build:
 
 requirements:
   build:
+    - setuptools
+    - setuptools-scm
     - {{ compiler('cxx')}} 
     - {{ stdlib("c") }}
     - make                               # [unix]
