@@ -19,6 +19,7 @@ requires-dist = "PyQt5 (>=5.12)"
 qmake-QT = ['xml opengl gui widgets']
 libraries = ['QGLViewer']
 tags = ['QGLViewer_2_9_1']
+extra-link-args = ["-framework", "OpenGL"]
 #include-dirs=['${CONDA_PREFIX}/include','${PREFIX}/include']
 #library-dirs=['${CONDA_PREFIX}/lib','${PREFIX}/lib']
 #extra-compile-args=['-I${CONDA_PREFIX}/include','-I${PREFIX}/include']

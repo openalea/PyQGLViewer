@@ -37,6 +37,7 @@ requirements:
     - libqglviewer
     - pyqt5-sip
     - pyqt-builder
+    - {{ cdt('mesa-libgl-devel') }}      # [linux]
 
   run:
     - python
