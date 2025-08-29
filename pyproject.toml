@@ -4,7 +4,7 @@ requires = ["sip", "pyqt-builder", "setuptools"]
 build-backend = "sipbuild.api"
 
 # Specify the PEP 566 metadata for the project.
-[tool.sip.metadata]
+[project]
 name = "PyQGLViewer"
 version = "1.3.0"
 summary = "Python bindings for the libQGViewer widget"
@@ -19,14 +19,14 @@ requires-dist = "PyQt5 (>=5.12)"
 qmake-QT = ["xml", "opengl", "gui", "widgets"]
 tags = ["QGLViewer_2_9_1"]
 
-[tool.sip.bindings.PyQGLViewer.linux]
+#[tool.sip.bindings.PyQGLViewer.linux]
 libraries = ["QGLViewer", "GLU"]
 
-[tool.sip.bindings.PyQGLViewer.macos]
-libraries = ["QGLViewer"]
-extra-link-args = ["-framework", "OpenGL"]
+#[tool.sip.bindings.PyQGLViewer.macos]
+#libraries = ["QGLViewer"]
+#extra-link-args = ["-framework", "OpenGL"]
 
-[tool.sip.bindings.PyQGLViewer.windows]
-libraries = ["QGLViewer2", "opengl32", "glu32"]
+#[tool.sip.bindings.PyQGLViewer.windows]
+#libraries = ["QGLViewer2", "opengl32", "glu32"]
 
 
