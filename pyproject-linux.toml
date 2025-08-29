@@ -1,6 +1,6 @@
  # Specify the build system.
 [build-system]
-requires = ["sip >=6.0.2, <7", "PyQt-builder >=1.6, <2"]
+requires = ["sip", "pyqt-builder"]
 build-backend = "sipbuild.api"
 
 # Specify the PEP 566 metadata for the project.
@@ -17,15 +17,15 @@ requires-dist = "PyQt5 (>=5.12)"
 
 [tool.sip.bindings.PyQGLViewer]
 qmake-QT = ['xml opengl gui widgets']
-qmake-CONFIG = ['c++14']
-libraries = ['QGLViewer','GLU']
+#qmake-CONFIG = ['c++14']
+#libraries = ['QGLViewer','GLU']
 tags = ['QGLViewer_2_9_1']
 #include-dirs=['${CONDA_PREFIX}/include','${PREFIX}/include']
 #library-dirs=['${CONDA_PREFIX}/lib','${PREFIX}/lib']
-extra-compile-args=['-I${CONDA_PREFIX}/include','-I${PREFIX}/include','-I${BUILD_PREFIX}/${HOST}/sysroot/usr/include']
-extra-link-args=['-L${CONDA_PREFIX}/lib','-L${PREFIX}/lib']
+#extra-compile-args=['-I${CONDA_PREFIX}/include','-I${PREFIX}/include','-I${BUILD_PREFIX}/${HOST}/sysroot/usr/include']
+#extra-link-args=['-L${CONDA_PREFIX}/lib','-L${PREFIX}/lib']
 
-[tool.sip.project]
-sip-module="PyQt5.sip"
-abi-version='12.8'
+#[tool.sip.project]
+#sip-module="PyQt5.sip"
+#abi-version='12.8'
 
