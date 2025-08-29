@@ -1,6 +1,6 @@
  # Specify the build system.
 [build-system]
-requires = ["sip", "pyqt-builder"]
+requires = ["sip", "pyqt-builder", "setuptools"]
 build-backend = "sipbuild.api"
 
 # Specify the PEP 566 metadata for the project.
@@ -21,8 +21,8 @@ libraries = ['QGLViewer']
 tags = ['QGLViewer_2_9_1']
 #include-dirs=['${CONDA_PREFIX}/include','${PREFIX}/include']
 #library-dirs=['${CONDA_PREFIX}/lib','${PREFIX}/lib']
-extra-compile-args=['-I${CONDA_PREFIX}/include','-I${PREFIX}/include']
-extra-link-args=['-L${CONDA_PREFIX}/lib','-L${PREFIX}/lib']
+#extra-compile-args=['-I${CONDA_PREFIX}/include','-I${PREFIX}/include']
+#extra-link-args=['-L${CONDA_PREFIX}/lib','-L${PREFIX}/lib']
 
 
 #[tool.sip.project]

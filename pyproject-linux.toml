@@ -1,6 +1,6 @@
  # Specify the build system.
 [build-system]
-requires = ["sip", "pyqt-builder"]
+requires = ["sip", "pyqt-builder", "setuptools"]
 build-backend = "sipbuild.api"
 
 # Specify the PEP 566 metadata for the project.
