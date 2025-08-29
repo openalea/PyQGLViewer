@@ -16,8 +16,7 @@ about:
 
 build:
   string: py{{ PY_VER }}
-  number: 2
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
   build:
@@ -36,6 +35,7 @@ requirements:
     - qt-main
     - pyqt
     - libqglviewer
+    - sip
     - pyqt5-sip
     - pyqt-builder
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
