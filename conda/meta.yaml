@@ -17,6 +17,7 @@ about:
 build:
   string: py{{ PY_VER }}
   number: 2
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
