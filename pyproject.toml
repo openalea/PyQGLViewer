@@ -24,13 +24,13 @@ qmake-QT = ["xml", "opengl", "gui", "widgets"]
 tags = ["QGLViewer_2_9_1"]
 
 #[tool.sip.bindings.PyQGLViewer.linux]
-libraries = ["QGLViewer", "GLU"]
+#libraries = ["QGLViewer", "GLU"]
 
 #[tool.sip.bindings.PyQGLViewer.macos]
 #libraries = ["QGLViewer"]
 #extra-link-args = ["-framework", "OpenGL"]
 
 #[tool.sip.bindings.PyQGLViewer.windows]
-#libraries = ["QGLViewer2", "opengl32", "glu32"]
+libraries = ["QGLViewer2", "opengl32", "glu32"]
 
 
