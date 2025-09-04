@@ -17,7 +17,7 @@ dependencies = ["PyQt6 (>=6.2.0)"]
 
 [tool.sip.bindings.PyQGLViewer]
 qmake-QT = ['xml opengl gui widgets openglwidgets']
-libraries = ['QGLViewer']
+libraries = ['QGLViewer-qt6']
 tags = ['QGLViewer_2_9_1']
 include-dirs=['${CONDA_PREFIX}/include']
 library-dirs=['${CONDA_PREFIX}/lib']
