@@ -26,6 +26,7 @@
 %Import QtCore/QtCoremod.sip
 %Import QtGui/QtGuimod.sip
 %Import QtOpenGL/QtOpenGLmod.sip
+%Import QtOpenGLWidgets/QtOpenGLWidgetsmod.sip
 %Import QtXml/QtXmlmod.sip
 
 %Timeline {QGLViewer_2_2_3 QGLViewer_2_2_4 QGLViewer_2_2_5 QGLViewer_2_2_6 

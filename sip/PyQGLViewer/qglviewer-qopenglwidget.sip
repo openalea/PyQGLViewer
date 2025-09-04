@@ -63,20 +63,20 @@ public:
                        Qt::WindowFlags flags=Qt::WindowFlags());
 
     explicit QGLViewer(QWidget* parent /TransferThis/, 
-                       const QGLWidget* shareWidget, Qt::WindowFlags flags=0);
+                       const QOpenGLWidget* shareWidget, Qt::WindowFlags flags=0);
 %End
 
 %If ( - QGLViewer_2_6_4)
     explicit QGLViewer(QWidget* parent /TransferThis/ = 0, 
-                       const QGLWidget* shareWidget=0, Qt::WindowFlags flags=0);
+                       const QOpenGLWidget* shareWidget=0, Qt::WindowFlags flags=0);
 %End
 
 
-    explicit QGLViewer(QGLContext *context, 
-                       QWidget* parent /TransferThis/=0, const QGLWidget* shareWidget=0, Qt::WindowFlags flags=Qt::WindowFlags());
+    explicit QGLViewer(QOpenGLContext *context,
+                       QWidget* parent /TransferThis/=0, const QOpenGLWidget* shareWidget=0, Qt::WindowFlags flags=Qt::WindowFlags());
 
-    explicit QGLViewer(const QGLFormat& format, 
-                       QWidget* parent /TransferThis/=0, const QGLWidget* shareWidget=0, Qt::WindowFlags flags=Qt::WindowFlags());
+//    explicit QGLViewer(const QGLFormat& format,
+//                       QWidget* parent /TransferThis/=0, const QOpenGLWidget* shareWidget=0, Qt::WindowFlags flags=Qt::WindowFlags());
 
     virtual ~QGLViewer();
     

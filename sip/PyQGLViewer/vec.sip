@@ -71,7 +71,7 @@ public:
   QDomElement domElement(const QString& name /In/, QDomDocument& document /In/) const;
   void initFromDOMElement(const QDomElement& element /In/);
 
-   int __len__() const;
+   Py_ssize_t __len__() const;
 %MethodCode
 	sipRes = 3;
 %End
