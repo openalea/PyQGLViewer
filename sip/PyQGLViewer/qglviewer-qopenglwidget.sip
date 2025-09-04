@@ -27,7 +27,7 @@ class QGLViewer : QOpenGLWidget {
 %TypeHeaderCode
 #include <QGLViewer/qglviewer.h>
 
-#include <QtOpenGL/qgl.h>
+//#include <QtOpenGL/qgl.h>
 
 #ifdef Q_OS_MAC
 	#include <OpenGL/glu.h>
@@ -58,22 +58,11 @@ class QGLViewer : QOpenGLWidget {
 %End
 
 public:
-%If (QGLViewer_2_7_0 - )
-    explicit QGLViewer(QWidget* parent /TransferThis/ =0,
-                       Qt::WindowFlags flags=Qt::WindowFlags());
+  explicit QGLViewer(QWidget *parent = 0,
+                     Qt::WindowFlags flags = Qt::WindowFlags());
 
-    explicit QGLViewer(QWidget* parent /TransferThis/, 
-                       const QOpenGLWidget* shareWidget, Qt::WindowFlags flags=0);
-%End
-
-%If ( - QGLViewer_2_6_4)
-    explicit QGLViewer(QWidget* parent /TransferThis/ = 0, 
-                       const QOpenGLWidget* shareWidget=0, Qt::WindowFlags flags=0);
-%End
-
-
-    explicit QGLViewer(QOpenGLContext *context,
-                       QWidget* parent /TransferThis/=0, const QOpenGLWidget* shareWidget=0, Qt::WindowFlags flags=Qt::WindowFlags());
+    //explicit QGLViewer(QOpenGLContext *context,
+                       //QWidget* parent /TransferThis/=0, const QOpenGLWidget* shareWidget=0, Qt::WindowFlags flags=Qt::WindowFlags());
 
 //    explicit QGLViewer(const QGLFormat& format,
 //                       QWidget* parent /TransferThis/=0, const QOpenGLWidget* shareWidget=0, Qt::WindowFlags flags=Qt::WindowFlags());

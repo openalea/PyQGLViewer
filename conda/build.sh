@@ -23,12 +23,12 @@ then
     export SYSROOT="${CONDA_BUILD_SYSROOT}"
 fi
 
-alias qmake='${CONDA_PREFIX}/bin/qmake'
+alias qmake='${CONDA_PREFIX}/bin/qmake6'
 
-export SIP_DIR="${PREFIX}/lib/python${PY_VER}/site-packages/PyQt5/bindings"
-echo "
-sip-include-dirs = [\"${SIP_DIR}\", \"${PREFIX}/share/sip\"]
-" >> pyproject.toml
+#export SIP_DIR="${PREFIX}/lib/python${PY_VER}/site-packages/PyQt5/bindings"
+#echo "
+#sip-include-dirs = [\"${SIP_DIR}\", \"${PREFIX}/share/sip\"]
+#" >> pyproject.toml
 
 
 echo "**** BUILD"

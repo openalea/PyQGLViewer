@@ -16,7 +16,7 @@ license = "GPL v3"
 dependencies = ["PyQt6 (>=6.2.0)"]
 
 [tool.sip.bindings.PyQGLViewer]
-qmake-QT = ['xml opengl gui widgets']
+qmake-QT = ['xml opengl gui widgets openglwidgets']
 libraries = ['QGLViewer']
 tags = ['QGLViewer_2_9_1']
 include-dirs=['${CONDA_PREFIX}/include']
