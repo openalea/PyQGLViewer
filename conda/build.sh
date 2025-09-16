@@ -17,7 +17,7 @@ then
     export LD=${GXX}
     export CC=${GCC}
     export CXX=${GXX}
-    # export PKG_CONFIG_EXECUTABLE=$(basename $(which pkg-config))
+    export PKG_CONFIG_EXECUTABLE=$(basename $(which pkg-config))
 
     # export PATH=${PWD}:${PATH}
     # export SYSROOT="${CONDA_BUILD_SYSROOT}"
