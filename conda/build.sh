@@ -5,7 +5,7 @@ then
     export MACOSX_VERSION_MIN=10.9
 fi
 
-if [ "$(uname)" == "Linux" ];
+if [ "$(uname)" == "Linuxxxxx" ];
 then
     export QMAKESPEC=linux-g++
     mv pyproject-linux.toml pyproject.toml
