@@ -1,6 +1,6 @@
  # Specify the build system.
 [build-system]
-requires = ["sip >=6.0.2, <7", "PyQt-builder >=1.6, <2"]
+requires = ["sip", "PyQt-builder"]
 build-backend = "sipbuild.api"
 
 # Specify the PEP 566 metadata for the project.
@@ -13,7 +13,7 @@ author = "Frederic Boudon"
 author-email = "frederic.boudon@cirad.fr"
 license = "GPL v3"
 #description-file = "README"
-requires-dist = "PyQt5 (>=5.12)"
+#requires-dist = "PyQt5 (>=5.12)"
 
 [tool.sip.bindings.PyQGLViewer]
 qmake-QT = ['xml opengl gui widgets']
@@ -27,5 +27,5 @@ extra-link-args=['-L${CONDA_PREFIX}/lib','-L${PREFIX}/lib']
 
 [tool.sip.project]
 sip-module="PyQt5.sip"
-abi-version='12.8'
+#abi-version='12.8'
 
