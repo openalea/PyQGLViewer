@@ -5,7 +5,7 @@ then
     export MACOSX_VERSION_MIN=10.9
 fi
 
-if [ "$(uname)" == "Linuxxxxx" ];
+if [ "$(uname)" == "Linux" ];
 then
     export QMAKESPEC=linux-g++
     mv pyproject-linux.toml pyproject.toml
@@ -20,7 +20,7 @@ then
     export PKG_CONFIG_EXECUTABLE=$(basename $(which pkg-config))
 
     export PATH=${PWD}:${PATH}
-    export SYSROOT="${CONDA_BUILD_SYSROOT}"
+    # export SYSROOT="${CONDA_BUILD_SYSROOT}"
 fi
 
 alias qmake='${CONDA_PREFIX}/bin/qmake'
