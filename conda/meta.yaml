@@ -22,10 +22,11 @@ build:
 
 requirements:
   build:
-    - {{ compiler('cxx')}}
+    - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
     - make                               # [unix]
     - pkg-config                         # [linux]
-    - mesa-libgl-devel-conda-aarch64     # [linux]  # match libqglviewer CDT GL strategy
+    - libgl-devel     # [linux]  # match libqglviewer CDT GL strategy
     # from https://conda-forge.org/docs/maintainer/knowledge_base.html#libgl
     - python                             # [build_platform != target_platform]
     - sip                                # [build_platform != target_platform]
@@ -39,7 +40,7 @@ requirements:
     - sip
     - pyqt5-sip
     - pyqt-builder
-    - mesa-libgl-devel-conda-aarch64     # [linux]
+    - libgl-devel     # [linux]
     - libxcb                             # [linux]
     - pthread-stubs                      # [linux]
     - xorg-libxfixes                     # [linux]
