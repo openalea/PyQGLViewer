@@ -25,4 +25,4 @@ qmake-QT = ['xml', 'opengl', 'gui', 'widgets']
 tags = ['QGLViewer_2_9_1']
 
 # Could specified directly with new construct but currently only working on MacOS. Instead options set in project.py
-# libraries = ['QGLViewer ; system_platform == "Linux"','GLU  ; system_platform == "Linux"']
+libraries = ['QGLViewer ; system_platform == "Linux"','GLU  ; system_platform == "Linux"']
