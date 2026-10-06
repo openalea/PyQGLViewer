@@ -18,7 +18,7 @@
 # WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
-import os
+import platform, os
 
 from pyqtbuild import PyQtBindings, PyQtProject
 
@@ -68,9 +68,6 @@ class PyQGLViewerBindings(PyQtBindings):
         print("Instanciation of the PyQGLViewerBindings ")
 
     def apply_user_defaults(self, tool):
-        import platform, os
-
-
         CONDA_PREFIX = os.environ.get('CONDA_PREFIX',None)
         PREFIX = os.environ.get('PREFIX',None)
         CONDA_BUILD_SYSROOT = os.environ.get('CONDA_BUILD_SYSROOT',None)
@@ -93,7 +90,7 @@ class PyQGLViewerBindings(PyQtBindings):
             self.libraries.append('QGLViewer2')
             self.libraries.append('opengl32')
             self.libraries.append('glu32')
-        
+    
         self.define_macros.append('PYQGLVIEWER_VERSION="'+PYQGLVIEWER_VERSION+'"')
         
         super().apply_user_defaults(tool)
