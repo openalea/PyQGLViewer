@@ -68,7 +68,28 @@ class PyQGLViewerBindings(PyQtBindings):
         print("Instanciation of the PyQGLViewerBindings ")
 
     def apply_user_defaults(self, tool):
-    
+        CONDA_PREFIX = os.environ.get('CONDA_PREFIX',None)
+        PREFIX = os.environ.get('PREFIX',None)
+        CONDA_BUILD_SYSROOT = os.environ.get('CONDA_BUILD_SYSROOT',None)
+
+        if platform.system() in ['Darwin','Linux'] :
+            self.libraries.append('QGLViewer')
+            if not CONDA_PREFIX is None:
+                self.include_dirs.append(f'{CONDA_PREFIX}/include')
+                self.library_dirs.append(f'{CONDA_PREFIX}/lib')
+            if not PREFIX is None:
+                self.include_dirs.append(f'{PREFIX}/include')
+                self.library_dirs.append(f'{PREFIX}/lib')
+
+        if platform.system() == 'Linux':
+            self.libraries.append('GLU')
+            if not CONDA_BUILD_SYSROOT is None :
+                self.include_dirs.append(f'{CONDA_BUILD_SYSROOT}/usr/include')
+
+        elif platform.system() == 'Windows':
+            self.libraries.append('QGLViewer2')
+            self.libraries.append('opengl32')
+            self.libraries.append('glu32')
     
         self.define_macros.append('PYQGLVIEWER_VERSION="'+PYQGLVIEWER_VERSION+'"')
         
