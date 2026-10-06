@@ -42,7 +42,6 @@ requirements:
     - pyqt-builder
     - libgl-devel     # [linux]
     - libxcb                             # [linux]
-    - pthread-stubs                      # [linux]
     - xorg-libxfixes                     # [linux]
 
 

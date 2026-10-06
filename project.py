@@ -68,10 +68,23 @@ class PyQGLViewerBindings(PyQtBindings):
         print("Instanciation of the PyQGLViewerBindings ")
 
     def apply_user_defaults(self, tool):
-        if platform.system() in ['Darwin','Linux'] :
+    
+        CONDA_PREFIX = os.environ.get('CONDA_PREFIX',None)
+        PREFIX = os.environ.get('PREFIX',None)
+
+        if platform.system() in ['Darwin'] :
             self.libraries.append('QGLViewer')
+            if not CONDA_PREFIX is None:
+                self.include_dirs.append(f'{CONDA_PREFIX}/include')
+                self.library_dirs.append(f'{CONDA_PREFIX}/lib')
+            if not PREFIX is None:
+                self.include_dirs.append(f'{PREFIX}/include')
+                self.library_dirs.append(f'{PREFIX}/lib')
+
         if platform.system() == 'Linux':
             self.libraries.append('GLU')
+            self.libraries.append('QGLViewer')
+
         elif platform.system() == 'Windows':
             self.libraries.append('QGLViewer2')
             self.libraries.append('opengl32')
