@@ -36,6 +36,8 @@ requirements:
   host:
     - python
     - pip
+    - sip
+    - pyqt-builder
     - packaging
     - qt-main
     - libqglviewer
