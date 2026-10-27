@@ -43,7 +43,7 @@ readlink -f "$GXX" || true
 "$GXX" -v -E -x c++ /dev/null
 
 echo "**** BUILD"
-pip install -vv --force-reinstall .
+${PYTHON} -m pip install . -v --no-build-isolation --no-deps
 
 echo
 echo "****** CHECK PYTHON LIB"
