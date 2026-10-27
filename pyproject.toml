@@ -1,7 +1,7 @@
  # Specify the build system.
 [build-system]
 # "setuptools", "setuptools-scm" not used
-requires = ["sip", "PyQt-builder"]
+requires = ["sip", "PyQt-builder", "PyQt5-sip"]
 build-backend = "sipbuild.api"
 
 
