@@ -3,20 +3,25 @@
 # Inspired from https://github.com/conda-forge/pyqt-feedstock/tree/main/recipe
 
 if [ "$(uname)" == "Linux" ]; then
-    #    USED_BUILD_PREFIX=${BUILD_PREFIX:-${PREFIX}}
-
-    #    ln -s ${GXX} g++ || true
-    #    ln -s ${GCC} gcc || true
-    #    ln -s ${USED_BUILD_PREFIX}/bin/${HOST}-gcc-ar gcc-ar || true
+    GXX_PATH=$(command -v "${GXX}")
+    GCC_PATH=$(command -v "${GCC}")
+    GCC_AR_PATH=$(command -v "${GCC_AR}")
+    ln -sf "${GXX_PATH}" g++
+    ln -sf "${GCC_PATH}" gcc
+    ln -sf "${GCC_AR_PATH}" gcc-ar
 
     export LD=${GXX}
     export CC=${GCC}
     export CXX=${GXX}
-    export QMAKE_CXX="${CXX}"
-    export QMAKE_CC="${CC}"
     export PKG_CONFIG_EXECUTABLE=$(basename $(which pkg-config))
 
-#    export PATH=${PWD}:${PATH}
+    chmod +x g++ gcc gcc-ar
+    export PATH=${PWD}:${PATH}
+
+    SYSROOT_FLAGS="-L ${BUILD_PREFIX}/${HOST}/sysroot/usr/lib64 -L ${BUILD_PREFIX}/${HOST}/sysroot/usr/lib"
+    export CFLAGS="$SYSROOT_FLAGS $CFLAGS"
+    export CXXFLAGS="$SYSROOT_FLAGS $CXXFLAGS"
+    export LDFLAGS="$SYSROOT_FLAGS $LDFLAGS"
 fi
 
 echo "CC=${CC}"

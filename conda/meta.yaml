@@ -22,25 +22,24 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
     - make                               # [unix]
-    - pkg-config                         # [linux]
-    - libgl-devel     # [linux]  # match libqglviewer CDT GL strategy
+    - pkg-config                         # [unix]
+    - libgl-devel                        # [linux]  # match libqglviewer CDT GL strategy
     # from https://conda-forge.org/docs/maintainer/knowledge_base.html#libgl
-    - python                             # [build_platform != target_platform]
-    - sip                                # [build_platform != target_platform]
-    - pyqt-builder                       # [build_platform != target_platform]
+    - python
+    - sip           
+    - pyqt  
+    - pyqt-builder                    
   host:
     - python
     - pip
+    - packaging
     - qt-main
-    - pyqt
     - libqglviewer
-    - sip
-    - pyqt5-sip
-    - pyqt-builder
-    - libgl-devel     # [linux]
+    - libgl-devel                        # [linux]
     - libxcb                             # [linux]
     - pthread-stubs                      # [linux]
     - xorg-libxfixes                     # [linux]
@@ -48,8 +47,8 @@ requirements:
 
   run:
     - python
-    - {{ pin_compatible('pyqt', max_pin='x.x') }}
-    - {{ pin_compatible('libqglviewer', max_pin='x.x') }}
+    - pyqt
+    - libqglviewer
     - pyopengl
     - xorg-libxfixes  # [linux]
 
