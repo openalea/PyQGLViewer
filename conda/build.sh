@@ -43,7 +43,7 @@ readlink -f "$GXX" || true
 "$GXX" -v -E -x c++ /dev/null
 
 echo "**** BUILD"
-pip install -v .
+pip install -vv --ignore-installed .
 
 echo
 echo "****** CHECK PYTHON LIB"
