@@ -5,9 +5,9 @@ dependencies:
     - python
     - pip
     - qt-main
-    - pyqt
+    - pyqt6
     - libqglviewer
     - sip
-    - pyqt5-sip
+    - pyqt6-sip
     - xorg-libxfixes  # [linux]
     - pyqt-builder
