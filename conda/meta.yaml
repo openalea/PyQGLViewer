@@ -19,6 +19,8 @@ build:
   string: py{{ PY_VER }}
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION
+  script:
+    - {{ PYTHON }} -m pip install . -v --no-build-isolation 
 
 requirements:
   build:
@@ -30,14 +32,14 @@ requirements:
     - libgl-devel                        # [linux]  # match libqglviewer CDT GL strategy
     # from https://conda-forge.org/docs/maintainer/knowledge_base.html#libgl
     - python
-    - sip           
-    - pyqt  
-    - pyqt-builder                    
+    # - sip           
+    # - pyqt  
+    # - pyqt-builder                    
   host:
     - python
     - pip
-    - sip
-    - pyqt-builder
+    # - sip
+    # - pyqt-builder
     - packaging
     - qt-main
     - libqglviewer

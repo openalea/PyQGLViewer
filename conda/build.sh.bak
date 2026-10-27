@@ -42,6 +42,8 @@ readlink -f "$GXX" || true
 
 "$GXX" -v -E -x c++ /dev/null
 
+${PYTHON} -m pip install --force-reinstall sip pyqt5-sip pyqt5  
+
 echo "**** BUILD"
 ${PYTHON} -m pip install . -v --no-build-isolation --no-deps
 
