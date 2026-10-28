@@ -19,17 +19,16 @@ build:
   string: py{{ PY_VER }}
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION
-  script:
-    - sip-install --verbose
+  # script:
+  #   - sip-install --verbose
     # - {{ PYTHON }} -m pip install . -v --no-build-isolation --no-deps --ignore-installed
 
 requirements:
   build:
-    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}                    # [osx and win]
-    # - make                               # [unix]
-    # - pkg-config                         # [unix]
+    - make                               # [unix]
+    - pkg-config                         # [unix]
     # - libgl-devel                        # [linux]  # match libqglviewer CDT GL strategy
     # # from https://conda-forge.org/docs/maintainer/knowledge_base.html#libgl
     # - python
