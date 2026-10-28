@@ -38,7 +38,7 @@ requirements:
   host:
     - python
     - pip
-    - sip
+    - sip=6.10
     - pyqt
     - pyqt5-sip
     - pyqt-builder=1.18
@@ -54,7 +54,8 @@ requirements:
 
   run:
     - python
-    - {{ pin_compatible('pyqt', max_pin='x.x') }}
+    - sip=6.10
+    - pyqt
     - libqglviewer
     - pyopengl
     - xorg-libxfixes  # [linux]
