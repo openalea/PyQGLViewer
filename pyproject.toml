@@ -16,6 +16,7 @@ authors = [
     { name = "Frederic Boudon", email = "frederic.boudon@cirad.fr" }
 ]
 dependencies = [
+    "sip",
     "PyQt5",
     "PyQt5-sip"
 ]
