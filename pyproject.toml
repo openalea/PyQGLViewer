@@ -1,7 +1,7 @@
  # Specify the build system.
 [build-system]
 # "setuptools", "setuptools-scm" not used
-requires = ["sip", "PyQt-builder"]
+requires = ["sip<=6.10", "PyQt-builder"]
 build-backend = "sipbuild.api"
 
 
@@ -16,7 +16,7 @@ authors = [
     { name = "Frederic Boudon", email = "frederic.boudon@cirad.fr" }
 ]
 dependencies = [
-    "sip",
+    "sip<=6.10",
     "PyQt5",
     "PyQt5-sip"
 ]

@@ -38,7 +38,7 @@ requirements:
   host:
     - python
     - pip
-    - sip=6.10
+    - sip<=6.10
     - pyqt
     - pyqt5-sip
     - pyqt-builder=1.18
@@ -54,7 +54,7 @@ requirements:
 
   run:
     - python
-    - sip=6.10
+    - sip<=6.10
     - pyqt
     - libqglviewer
     - pyopengl
